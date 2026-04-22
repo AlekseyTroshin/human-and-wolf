@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 67c2c21e717624e3483451da9f2aab82
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4494058765909510823
+    second: trap-moss-amanita-big03_0
+  - first:
+      213: 6755542929809375557
+    second: trap-moss-amanita-big03_1
+  - first:
+      213: 7177976837897583431
+    second: trap-moss-amanita-big03_2
+  - first:
+      213: -7723547177871374854
+    second: trap-moss-amanita-big03_3
+  - first:
+      213: 4842263900435275923
+    second: trap-moss-amanita-big03_4
+  - first:
+      213: -4188259014298755905
+    second: trap-moss-amanita-big03_5
+  - first:
+      213: -988300665508340498
+    second: trap-moss-amanita-big03_6
+  - first:
+      213: 162270049331936728
+    second: trap-moss-amanita-big03_7
+  - first:
+      213: 9051270481710705036
+    second: trap-moss-amanita-big03_8
+  - first:
+      213: 3636132200289272690
+    second: trap-moss-amanita-big03_9
+  - first:
+      213: -1007720809392719334
+    second: trap-moss-amanita-big03_10
+  - first:
+      213: -8201571558780838661
+    second: trap-moss-amanita-big03_11
+  - first:
+      213: -3296137625426367446
+    second: trap-moss-amanita-big03_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_0
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 5494
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955bb3aec55e1a1c0800000000000000
+      internalID: -4494058765909510823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_1
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 5399
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5418034908280cd50800000000000000
+      internalID: 6755542929809375557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_2
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 5426
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74bfddc47eb4d9360800000000000000
+      internalID: 7177976837897583431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_3
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 5425
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5810943c270d490800000000000000
+      internalID: -7723547177871374854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_4
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 5371
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390642eac5d233340800000000000000
+      internalID: 4842263900435275923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_5
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 5349
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc1569ed9050e5c0800000000000000
+      internalID: -4188259014298755905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_6
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 5286
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eecd71de7c9d842f0800000000000000
+      internalID: -988300665508340498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_7
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 5306
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd7d1800cf704200800000000000000
+      internalID: 162270049331936728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_8
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 5272
+        width: 73
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8968542c829c9d70800000000000000
+      internalID: 9051270481710705036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_9
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 5304
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2730a9a98f2267230800000000000000
+      internalID: 3636132200289272690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_10
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 4936
+        width: 1441
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ab063534bd302f0800000000000000
+      internalID: -1007720809392719334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_11
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 5009
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfcdbeefe1a2e2e80800000000000000
+      internalID: -8201571558780838661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap-moss-amanita-big03_12
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 4975
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c69a91b44c142d0800000000000000
+      internalID: -3296137625426367446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      trap-moss-amanita-big03_0: -4494058765909510823
+      trap-moss-amanita-big03_1: 6755542929809375557
+      trap-moss-amanita-big03_10: -1007720809392719334
+      trap-moss-amanita-big03_11: -8201571558780838661
+      trap-moss-amanita-big03_12: -3296137625426367446
+      trap-moss-amanita-big03_2: 7177976837897583431
+      trap-moss-amanita-big03_3: -7723547177871374854
+      trap-moss-amanita-big03_4: 4842263900435275923
+      trap-moss-amanita-big03_5: -4188259014298755905
+      trap-moss-amanita-big03_6: -988300665508340498
+      trap-moss-amanita-big03_7: 162270049331936728
+      trap-moss-amanita-big03_8: 9051270481710705036
+      trap-moss-amanita-big03_9: 3636132200289272690
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
