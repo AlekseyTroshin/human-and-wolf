@@ -206,6 +206,7 @@ MonoBehaviour:
   _groundDetection: {fileID: 6310433489196442015}
   _isRightDirection: 0
   _spriteRenderer: {fileID: 7823031756992872578}
+  _collisionDamage: {fileID: 2591096797802260555}
 --- !u!114 &5386213916242652035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 2
   _animator: {fileID: 441965671037167262}
+  _spriteRenderer: {fileID: 0}
 --- !u!114 &6310433489196442015
 MonoBehaviour:
   m_ObjectHideFlags: 0

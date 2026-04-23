@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerInventory _playerInventory;
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private GameObject _arrow;
+    [SerializeField] private Transform _arrowSpawnPoint;
 
     private bool _isLeft;
     private bool _isRigth;
@@ -77,6 +79,19 @@ public class Player : MonoBehaviour
         _isJump = false;
         _isLeft = false;
         _isRigth = false;
+
+        CheekShoot();
+    }
+
+    private void CheekShoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject prefab = Instantiate
+                (_arrow, _arrowSpawnPoint.position, Quaternion.identity);
+
+            prefab.GetComponent<Arrow>().SetImpulce(Vector2.right, _forceUp * 5);
+        }
     }
 
     private IEnumerator StartJump()

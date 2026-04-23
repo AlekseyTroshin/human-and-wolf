@@ -6,6 +6,7 @@ public class CollisionDamage : MonoBehaviour
 
     [SerializeField] private int _damage = 10;
     [SerializeField] private Animator _animator;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
 
     private Health _health;
     private float _direction;
