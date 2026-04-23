@@ -153,7 +153,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 8582398091969937045}
   _rigidbody2D: {fileID: 5082182521394806600}
-  _force: 3
+  _force: 5
   _timeLife: 3
   _triggerDamage: {fileID: 4935422467428164630}
 --- !u!95 &2265121776141027334

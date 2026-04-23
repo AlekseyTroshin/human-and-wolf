@@ -26,7 +26,7 @@ public class Arrow : MonoBehaviour
                                     );
 
         _triggerDamage.Parent = parent;
-        _rigidbody2D.AddForce(direction * force, ForceMode2D.Impulse);
+        _rigidbody2D.AddForce(direction * _force * force, ForceMode2D.Impulse);
         StartCoroutine(TimeLife());
     }
 
