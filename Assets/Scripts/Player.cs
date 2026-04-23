@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Rigidbody2D rigidbody2d;
+    
 
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _forceUp = 5;
     [SerializeField] private GroundDetection _groundDetection;
     [SerializeField] private PlayerInventory _playerInventory;
     [SerializeField] private Animator _animator;
+    [SerializeField] private Rigidbody2D _rigidbody2D;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private GameObject _arrow;
     [SerializeField] private Transform _arrowSpawnPoint;
+    [SerializeField] private float _shootForce = 20;
 
     private bool _isLeft;
     private bool _isRigth;
@@ -58,9 +60,9 @@ public class Player : MonoBehaviour
             _direction = Vector3.right;
 
         _direction *= _speed;
-        _direction.y = rigidbody2d.linearVelocity.y;
+        _direction.y = _rigidbody2D.linearVelocity.y;
 
-        rigidbody2d.linearVelocity = _direction;        
+        _rigidbody2D.linearVelocity = _direction;        
 
         if (_isJump && _groundDetection.isGround)
         {
@@ -90,7 +92,11 @@ public class Player : MonoBehaviour
             GameObject prefab = Instantiate
                 (_arrow, _arrowSpawnPoint.position, Quaternion.identity);
 
-            prefab.GetComponent<Arrow>().SetImpulce(Vector2.right, _forceUp * 5);
+            prefab.GetComponent<Arrow>().SetImpulce(
+                _spriteRenderer.flipX ? Vector2.left : Vector2.right , 
+                _shootForce, 
+                gameObject
+            );
         }
     }
 
@@ -98,7 +104,7 @@ public class Player : MonoBehaviour
     {
         _animator.SetTrigger("StartJump");
         yield return new WaitForSeconds(0.1f);
-        rigidbody2d.AddForce(Vector2.up * _forceUp, ForceMode2D.Impulse);
+        _rigidbody2D.AddForce(Vector2.up * _forceUp, ForceMode2D.Impulse);
     }
 
 }

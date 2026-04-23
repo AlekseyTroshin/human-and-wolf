@@ -441,15 +441,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5191603df3cc74008b2af42fdeabb7f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody2d: {fileID: 6021551465085473948}
   _speed: 5
   _forceUp: 10
   _groundDetection: {fileID: 1007172650372368269}
   _playerInventory: {fileID: 3933485232671920475}
   _animator: {fileID: 5482959501192860118}
+  _rigidbody2D: {fileID: 6021551465085473948}
   _spriteRenderer: {fileID: 1235578858363538733}
   _arrow: {fileID: 8951551730608342002, guid: cc11cdf8a084842b6a11c8430d65674d, type: 3}
   _arrowSpawnPoint: {fileID: 3179979618676604229}
+  _shootForce: 5
 --- !u!114 &1673324729858432099
 MonoBehaviour:
   m_ObjectHideFlags: 0
