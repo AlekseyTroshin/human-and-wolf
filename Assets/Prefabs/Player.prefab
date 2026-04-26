@@ -448,8 +448,9 @@ MonoBehaviour:
   _animator: {fileID: 5482959501192860118}
   _rigidbody2D: {fileID: 6021551465085473948}
   _spriteRenderer: {fileID: 1235578858363538733}
-  _arrow: {fileID: 8951551730608342002, guid: cc11cdf8a084842b6a11c8430d65674d, type: 3}
+  _arrow: {fileID: 8067948288899315180, guid: cc11cdf8a084842b6a11c8430d65674d, type: 3}
   _arrowSpawnPoint: {fileID: 3179979618676604229}
+  _arrowsCount: 5
   _shootForce: 5
 --- !u!114 &1673324729858432099
 MonoBehaviour:

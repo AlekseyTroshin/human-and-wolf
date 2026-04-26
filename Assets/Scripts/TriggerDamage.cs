@@ -6,6 +6,12 @@ public class TriggerDamage : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private bool _isDestroyAfterCollision;
     [SerializeField] private GameObject _parent;
+    private IObjectDestroyer _objectDestroyer;
+
+    public void Init(IObjectDestroyer destroyer)
+    {
+        _objectDestroyer = destroyer;
+    }
 
     public GameObject Parent
     {
@@ -28,7 +34,22 @@ public class TriggerDamage : MonoBehaviour
             health.TakeHit(_damage);
 
         if (_isDestroyAfterCollision)
-            Destroy(gameObject);
+        {
+            if (_objectDestroyer == null)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                _objectDestroyer.Destroy(gameObject);
+            }
+        }
+            
     }
 
+}
+
+public interface IObjectDestroyer
+{
+    void Destroy(GameObject gameObject);
 }

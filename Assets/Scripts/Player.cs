@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     
-
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _forceUp = 5;
     [SerializeField] private GroundDetection _groundDetection;
@@ -13,10 +13,13 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody2D _rigidbody2D;
     [SerializeField] private SpriteRenderer _spriteRenderer;
-    [SerializeField] private GameObject _arrow;
+    [SerializeField] private Arrow _arrow;
     [SerializeField] private Transform _arrowSpawnPoint;
+    [SerializeField] private int _arrowsCount = 5;
     [SerializeField] private float _shootForce = 5;
 
+    private Arrow _currentArrow;
+    private Queue<Arrow> _arrowPool;
     private bool _isLeft;
     private bool _isRigth;
     private bool _isJump;
@@ -25,7 +28,18 @@ public class Player : MonoBehaviour
     private bool _isMove;
     private Coroutine _shotCoroutine;
     private bool _isStartShot;
-    
+
+    private void Start()
+    {
+        _arrowPool = new Queue<Arrow>();
+        for (int i = 0; i < _arrowsCount; i++)
+        {
+            Arrow arrowTemp = Instantiate(_arrow, _arrowSpawnPoint);
+            arrowTemp.gameObject.SetActive(false);
+            arrowTemp.TriggerDamage.Parent = gameObject;
+            _arrowPool.Enqueue(arrowTemp);
+        }
+    }
 
     private void Awake()
     {
@@ -62,7 +76,9 @@ public class Player : MonoBehaviour
             StopCoroutine(_shotCoroutine);
             _isStartShot = false;
         }
-            
+        
+
+        CheekShoot();
     }
 
     private void FixedUpdate()
@@ -85,7 +101,6 @@ public class Player : MonoBehaviour
             );
         }
             
-
         if (_isRigth)
         {
             _direction = Vector3.right;
@@ -96,7 +111,6 @@ public class Player : MonoBehaviour
             );
         }
             
-
         _direction *= _speed;
         _direction.y = _rigidbody2D.linearVelocity.y;
 
@@ -116,8 +130,6 @@ public class Player : MonoBehaviour
             _spriteRenderer.flipX = true;
 
         _animator.SetFloat("Speed", Math.Abs(_direction.x));
-
-        CheekShoot();
 
         _isJump = false;
         _isLeft = false;
@@ -151,31 +163,53 @@ public class Player : MonoBehaviour
     private IEnumerator StartShot()
     {
 
-            yield return new WaitForSeconds(0.2f);  
+       
 
-            GameObject prefab = Instantiate
-                (_arrow, _arrowSpawnPoint.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.2f);  
 
-            prefab.GetComponent<Arrow>().SetImpulce(
-                _spriteRenderer.flipX ? Vector2.left : Vector2.right, 
-                0, 
-                gameObject
-            );
+         _currentArrow = GetArrowFromPool();
 
-            yield return new WaitForSeconds(0.1f);
+        _currentArrow.SetImpulce(
+            _spriteRenderer.flipX ? Vector2.left : Vector2.right, 
+            0, 
+            this
+        );
 
-            prefab.GetComponent<Arrow>().SetImpulce(
-                _spriteRenderer.flipX ? Vector2.left : Vector2.right, 
-                _shootForce, 
-                gameObject
-            );
+        yield return new WaitForSeconds(0.1f);
 
-            _animator.SetBool("isShot", false);
-            _shotCoroutine = null;
+        _currentArrow.SetImpulce(
+            _spriteRenderer.flipX ? Vector2.left : Vector2.right, 
+            _shootForce, 
+            this
+        );
 
-            yield return new WaitForSeconds(0.5f);
+        _animator.SetBool("isShot", false);
+        _shotCoroutine = null;
 
-            _isStartShot = false;
+        yield return new WaitForSeconds(0.5f);
+
+        _isStartShot = false;
+    
+    }
+
+    private Arrow GetArrowFromPool()
+    {
+        if (_arrowPool.Count > 0)
+        {
+            Arrow arrowTemp = _arrowPool.Dequeue();
+            arrowTemp.gameObject.SetActive(true);
+            arrowTemp.transform.position = _arrowSpawnPoint.transform.position;
+            return arrowTemp;
+        }
+
+        return Instantiate (_arrow, _arrowSpawnPoint.position, Quaternion.identity);
+    }
+
+    public void ReturnArrowToPool(Arrow arrow)
+    {
+        Debug.Log("yes " + arrow);
+        arrow.gameObject.SetActive(false);
+        _arrowPool.Enqueue(arrow);
         
     }
 
