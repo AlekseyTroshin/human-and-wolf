@@ -6,12 +6,18 @@ public class PlayerInventory : MonoBehaviour
     
     [SerializeField] private int _amountCouns;
 
+    private void Start()
+    {
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Coin"))
+        
+        if (GameManager.Instance.coinContainer.ContainsKey(collision.gameObject))
         {
             _amountCouns++;
-            Destroy(collision.gameObject);
+            GameManager.Instance.coinContainer[collision.gameObject].StartDestroy();
         }        
     }
 

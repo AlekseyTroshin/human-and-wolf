@@ -207,7 +207,6 @@ public class Player : MonoBehaviour
 
     public void ReturnArrowToPool(Arrow arrow)
     {
-        Debug.Log("yes " + arrow);
         arrow.gameObject.SetActive(false);
         _arrowPool.Enqueue(arrow);
         

@@ -29,8 +29,10 @@ public class TriggerDamage : MonoBehaviour
     {
         if (collision.gameObject == _parent) return;
         
-        Health health = collision.GetComponent<Health>();
-        if (health != null)
+        Health health;
+        bool exists = GameManager.Instance.healthContainer.TryGetValue(collision.gameObject, out health);
+
+        if (exists)
             health.TakeHit(_damage);
 
         if (_isDestroyAfterCollision)
