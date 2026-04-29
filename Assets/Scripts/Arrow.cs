@@ -10,6 +10,8 @@ public class Arrow : MonoBehaviour, IObjectDestroyer
     [SerializeField] private float _timeLife;
     [SerializeField] private TriggerDamage _triggerDamage;
 
+    private float _directionFly;
+
     public TriggerDamage TriggerDamage
     {
         get { return _triggerDamage; }
@@ -25,22 +27,31 @@ public class Arrow : MonoBehaviour, IObjectDestroyer
     
     public void Destroy(GameObject gameObject)
     {
-        Debug.Log("One");
         _player.ReturnArrowToPool(this);
     }
 
     public void SetImpulce(Vector2 direction, float force, Player player)
     {
         _player = player;
+        _triggerDamage.Parent = _player.gameObject;
+               
         if (direction.x < 0)
-            transform.rotation = Quaternion.Euler(
+            _directionFly = 180f;
+        else
+            _directionFly = 0;
+            
+        transform.rotation = Quaternion.Euler(
                                         transform.rotation.x,
-                                        180f,
+                                        _directionFly,
                                         transform.rotation.z
                                     );
+
+
         _triggerDamage.Init(this);
-        _triggerDamage.Parent = _player.gameObject;
         _rigidbody2D.AddForce(direction * _force * force, ForceMode2D.Impulse);
+ 
+        if (!gameObject.activeSelf) return;
+        
         StartCoroutine(TimeLife());
     }
 

@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.healthContainer.Add(gameObject, this);  
+        GameManager.Instance.healthContainer.Add(gameObject, this); 
     }
 
     public void TakeHit(int damage)

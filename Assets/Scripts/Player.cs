@@ -39,6 +39,8 @@ public class Player : MonoBehaviour
             arrowTemp.TriggerDamage.Parent = gameObject;
             _arrowPool.Enqueue(arrowTemp);
         }
+
+        GameManager.Instance.animatorContainer.Add(gameObject, _animator);
     }
 
     private void Awake()
@@ -149,6 +151,7 @@ public class Player : MonoBehaviour
             _isRigth = false;
             _shotCoroutine = null;
             _animator.SetBool("isShot", true);
+            
             _shotCoroutine = StartCoroutine(StartShot());
         }
     }
@@ -162,10 +165,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator StartShot()
     {
-
-       
-
-        yield return new WaitForSeconds(0.2f);  
+        yield return new WaitForSeconds(0.2f); 
 
          _currentArrow = GetArrowFromPool();
 
@@ -182,7 +182,7 @@ public class Player : MonoBehaviour
             _shootForce, 
             this
         );
-
+                
         _animator.SetBool("isShot", false);
         _shotCoroutine = null;
 

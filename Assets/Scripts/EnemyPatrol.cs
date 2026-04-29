@@ -5,8 +5,7 @@ using UnityEngine;
 public class EnemyPatrol : MonoBehaviour
 {
 
-    public Animator animator;
-
+    [SerializeField] private Animator _animator;
     [SerializeField] private GameObject _leftBorder;
     [SerializeField] private GameObject _rightBorder;
     [SerializeField] private Rigidbody2D _rigidbody;
@@ -16,12 +15,17 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private CollisionDamage _collisionDamage;
 
+    private void Start()
+    {
+        GameManager.Instance.animatorContainer.Add(gameObject, _animator);
+    }
+
     private void FixedUpdate()
     {
         
         if (_groundDetection.isGround)
         {
-            animator.SetFloat("Speed", Math.Abs(_speed));
+            _animator.SetFloat("Speed", Math.Abs(_speed));
 
             if (transform.position.x > _rightBorder.transform.position.x
                 || _collisionDamage.Direction < 0)
@@ -38,6 +42,8 @@ public class EnemyPatrol : MonoBehaviour
              _spriteRenderer.flipX = true;
         else
              _spriteRenderer.flipX = false;
+
+        
     }
 
 }

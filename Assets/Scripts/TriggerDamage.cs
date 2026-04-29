@@ -30,10 +30,18 @@ public class TriggerDamage : MonoBehaviour
         if (collision.gameObject == _parent) return;
         
         Health health;
-        bool exists = GameManager.Instance.healthContainer.TryGetValue(collision.gameObject, out health);
+        bool exists = GameManager.Instance.healthContainer
+            .TryGetValue(collision.gameObject, out health);
 
         if (exists)
+        {
+            if (GameManager.Instance.animatorContainer.ContainsKey(collision.gameObject))
+            {
+                GameManager.Instance
+                    .animatorContainer[collision.gameObject].SetTrigger("TakeDamage");
+            }
             health.TakeHit(_damage);
+        }
 
         if (_isDestroyAfterCollision)
         {
@@ -46,7 +54,6 @@ public class TriggerDamage : MonoBehaviour
                 _objectDestroyer.Destroy(gameObject);
             }
         }
-            
     }
 
 }
