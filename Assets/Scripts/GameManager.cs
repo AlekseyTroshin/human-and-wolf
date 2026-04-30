@@ -27,16 +27,12 @@ public class GameManager : MonoBehaviour
         animatorContainer = new Dictionary<GameObject, Animator>();
     }
 
-    private void Start()
+    public void OnPauseClick()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            healthContainer = new Dictionary<GameObject, Health>();
-            coinContainer = new Dictionary<GameObject, Coin>();
-            buffReceiverContainer = new Dictionary<GameObject, BuffReceiver>();
-            animatorContainer = new Dictionary<GameObject, Animator>();
-        }
+        if (Time.timeScale > 0)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
     }
 
 }

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform _arrowSpawnPoint;
     [SerializeField] private int _arrowsCount = 5;
     [SerializeField] private float _shootForce = 5;
+    [SerializeField] private Health _health;
 
     private Arrow _currentArrow;
     private Queue<Arrow> _arrowPool;
@@ -28,6 +29,11 @@ public class Player : MonoBehaviour
     private bool _isMove;
     private Coroutine _shotCoroutine;
     private bool _isStartShot;
+
+    public Health Health
+    {
+        get { return _health; }
+    }
 
     private void Start()
     {

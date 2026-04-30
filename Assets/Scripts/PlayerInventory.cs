@@ -10,7 +10,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void Start()
     {
-        coinsText.text = "Количество монет: 0";
+        coinsText.text = "0";
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
         {
             _amountCouns++;
             GameManager.Instance.coinContainer[collision.gameObject].StartDestroy();
-            coinsText.text = "Количество монет: " + _amountCouns;
+            coinsText.text = _amountCouns.ToString();
         }        
     }
 

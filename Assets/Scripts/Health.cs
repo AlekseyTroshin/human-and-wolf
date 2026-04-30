@@ -4,6 +4,11 @@ public class Health : MonoBehaviour
 {
     
     [SerializeField] private int _health;
+    
+    public int CurrentHealth
+    {
+        get { return _health; }
+    }
 
     private void Start()
     {
