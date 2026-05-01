@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<GameObject, Coin> coinContainer;
     public Dictionary<GameObject, BuffReceiver> buffReceiverContainer;
     public Dictionary<GameObject, Animator> animatorContainer;
+    public ItemBase itemDataBase;
 
     private void Awake()
     {
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
         buffReceiverContainer = new Dictionary<GameObject, BuffReceiver>();
         animatorContainer = new Dictionary<GameObject, Animator>();
     }
+
+    private void Hello() {}
 
     public void OnPauseClick()
     {

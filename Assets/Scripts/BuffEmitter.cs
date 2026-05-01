@@ -38,6 +38,6 @@ public class Buff
 public enum BuffType : byte
 {
     
-    Damage, Force, Armor
+    Damage, Armor, Force
 
 }

@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     [SerializeField] private int _arrowsCount = 5;
     [SerializeField] private float _shootForce = 5;
     [SerializeField] private Health _health;
+    [SerializeField] private Item _item;
+
 
     private Arrow _currentArrow;
     private Queue<Arrow> _arrowPool;
@@ -45,6 +47,8 @@ public class Player : MonoBehaviour
             arrowTemp.TriggerDamage.Parent = gameObject;
             _arrowPool.Enqueue(arrowTemp);
         }
+
+        Debug.Log("Item " + _item.ID + " " + _item.ItemName + " " + _item.Description);
 
         GameManager.Instance.animatorContainer.Add(gameObject, _animator);
     }
