@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6015638722368272683}
   - component: {fileID: 5989758785535788236}
-  - component: {fileID: 6046230986017848699}
   - component: {fileID: 833557933867255196}
   - component: {fileID: 2914663799725804326}
   m_Layer: 0
   m_Name: Potion
-  m_TagString: Coin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,28 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6046230986017848699
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4317800961225434053}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f7911b0f19a664952a81c454c6833095, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &833557933867255196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -170,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47fc0f3936c2e4069a8223af164b0f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemType: 1
+  _itemType: 2
   _spriteRenderer: {fileID: 5989758785535788236}
 --- !u!1 &7479809349206774635
 GameObject:
@@ -197,7 +174,7 @@ Transform:
   m_GameObject: {fileID: 7479809349206774635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.47, y: -1.59, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

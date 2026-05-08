@@ -30,9 +30,7 @@ public class ItemBaseEditor : Editor
             _itemBase.NextItem();
 
         GUILayout.EndHorizontal();
-        
-        if (GUILayout.Button("Show"))
-            _itemBase.ShowItems();
+
         base.OnInspectorGUI();        
     }
 

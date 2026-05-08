@@ -3,7 +3,6 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "New Item Database", menuName = "Databases/Items")]
-
 public class ItemBase : ScriptableObject
 {
 
@@ -17,13 +16,12 @@ public class ItemBase : ScriptableObject
         if (_items == null)
         {
             _items = new List<Item>();
-            Debug.Log("CREATE");
         }
 
         Item item = new Item();
         _items.Add(item);
         _currentItem = item;
-        _currentIndex = _items.Count;
+        _currentIndex = _items.Count - 1;
     }
 
     public void DeleteItem()
@@ -34,15 +32,17 @@ public class ItemBase : ScriptableObject
 
         if (_items.Count > 0)
             _currentItem = _items[0];
+        else
+            CreateItem();
         _currentIndex = 0;
     }
 
     public void NextItem()
     {
-        if (_currentIndex < _items.Count)
+        if (_currentIndex + 1 < _items.Count)
         {
-            _currentItem = _items[_currentIndex];
             _currentIndex++;
+            _currentItem = _items[_currentIndex];
         }
     }
 
@@ -59,17 +59,10 @@ public class ItemBase : ScriptableObject
     {
         return _items.Find( t => t.ID == id);
     }
-
-    public void ShowItems()
-    {
-        foreach (var item in _items)
-            Debug.Log("item " + item.ID + " " + item.ItemName + " " + item.Description + " " + item.Type + " " + item.Value);
-    }
     
 }
 
 [System.Serializable]
-
 public class Item
 {
 
@@ -79,11 +72,6 @@ public class Item
     [SerializeField] private BuffType _type;
     [SerializeField] private float _value;
     [SerializeField] private Sprite _sprite;
-
-    public Item()
-    {
-        Debug.Log("constructor " + _id + " " + _itemName + " " + _description + " " + _type + " " + _value);
-    }
 
     public int ID
     {

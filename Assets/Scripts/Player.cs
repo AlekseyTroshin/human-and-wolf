@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _shootForce = 5;
     [SerializeField] private Health _health;
     [SerializeField] private Item _item;
-
+    [SerializeField] private BuffReceiver _buffReceiver;
 
     private Arrow _currentArrow;
     private Queue<Arrow> _arrowPool;
@@ -48,9 +48,14 @@ public class Player : MonoBehaviour
             _arrowPool.Enqueue(arrowTemp);
         }
 
-        Debug.Log("Item " + _item.ID + " " + _item.ItemName + " " + _item.Description);
-
         GameManager.Instance.animatorContainer.Add(gameObject, _animator);
+        Debug.Log(_buffReceiver);
+        _buffReceiver.OnBuffsChenged += TestFunc; 
+    }
+
+    private void TestFunc(Buff buff)
+    {
+        Debug.Log(buff.type + " This is test delegate");
     }
 
     private void Awake()

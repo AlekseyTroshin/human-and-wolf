@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f450fe5a0ecb94daca98a37b79e41050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
+  _damage: 10
   _animator: {fileID: 441965671037167262}
   _spriteRenderer: {fileID: 7823031756992872578}
   _timeBeetweenSetDamage: 0.5

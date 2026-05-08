@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BuffReceiver : MonoBehaviour
 {
     
     private List<Buff> _buffs;
+    public Action<Buff> OnBuffsChenged;
 
     private void Start()
     {
@@ -18,12 +20,18 @@ public class BuffReceiver : MonoBehaviour
         {
             _buffs.Add(buff);
         }
+
+        if (OnBuffsChenged != null)
+            OnBuffsChenged(buff);
     }
 
     public void DeleteBuff(Buff buff)
     {
         if (_buffs.Contains(buff))
             _buffs.Remove(buff);
+
+        if (OnBuffsChenged != null)
+            OnBuffsChenged(buff); 
     }
 
 }
